@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Pavana Lake Camping</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- special tags -->
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-W7P9GJPF');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0YMN4W8BE6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-0YMN4W8BE6');
+    </script>
+
+    <!-- Fontawesome Link for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <style>
+        #services {
+            margin-top: 3%;
+        }
+
+        .card img {
+            width: 10%;
+        }
+
+        .btn {
+            display: flex;
+            justify-content: center;
+        }
+
+        .button {
+            position: relative;
+            padding: 10px 22px;
+            border-radius: 6px;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            background-color: #7d2ae8;
+            transition: all 0.2s ease;
+            width: 10rem;
+            text-align: center;
+            align-items: center;
+            margin-bottom: .5rem;
+        }
+
+        .button:active {
+            transform: scale(0.96);
+        }
+
+        .button:before,
+        .button:after {
+            position: absolute;
+            content: "";
+            width: 180%;
+            left: 50%;
+            height: 100%;
+            transform: translateX(-50%);
+            z-index: -1000;
+            background-repeat: no-repeat;
+        }
+
+        .button:hover:before {
+            top: -70%;
+            background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+                radial-gradient(circle, transparent 20%, #7d2ae8 20%, transparent 30%),
+                radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+                radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+                radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+                radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+                radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+                radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+                radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+            background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+                10% 10%, 18% 18%;
+            background-position: 50% 120%;
+            animation: greentopBubbles 0.6s ease;
+        }
+
+        @keyframes greentopBubbles {
+            0% {
+                background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+                    40% 90%, 55% 90%, 70% 90%;
+            }
+
+            50% {
+                background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+                    50% 50%, 65% 20%, 90% 30%;
+            }
+
+            100% {
+                background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+                    50% 40%, 65% 10%, 90% 20%;
+                background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+            }
+        }
+
+        .button:hover::after {
+            bottom: -70%;
+            background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+                radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+                radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+                radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+                radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+                radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+                radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+            background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+            background-position: 50% 0%;
+            animation: greenbottomBubbles 0.6s ease;
+        }
+
+        @keyframes greenbottomBubbles {
+            0% {
+                background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+                    70% -10%, 70% 0%;
+            }
+
+            50% {
+                background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+                    105% 0%;
+            }
+
+            100% {
+                background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+                    110% 10%;
+                background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+            }
+        }
+
+        .services>p {
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <h2 class="logo"><a href="index.html">Book My Pawana</a></h2>
+            <input type="checkbox" id="menu-toggler">
+            <label for="menu-toggler" id="hamburger-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path d="M3 18h18v-2H3v2zm0-5h18V11H3v2zm0-7v2h18V6H3z" />
+                </svg>
+            </label>
+            <ul class="all-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="./gallery.html">Gallery</a></li>
+                <li><a href="aboutUs.html">About Us</a></li>
+                <li><a href="index.html#contact">Contact Us</a></li>
+                <li><a href="tel:+918552955233" target="_blank"><i class="fa-solid fa-phone"></i>
+                        &nbsp;&nbsp;&nbsp;Call Us</a>
+                </li>
+                <li><a class="whatsapp" href="https://wa.me/8552955233" target="_blank"><i
+                            class="fas fa-brands fa-whatsapp"></i>&nbsp;&nbsp;&nbsp;Whatsapp</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="services" id="services">
+        <h1>Our Services</h1>
+        <p>Experience a perfect blend of adventure, comfort, and <br>hospitality with our exceptional services at Pavana
+            Lake Camping.</p>
+        <a href="./payment.html">
+            <div class="btn button">Book Now</div>
+        </a>
+        <ul class="cards">
+            <li class="card">
+                <img src="./images/tent.JPG" alt="img">
+                <h3>Tent</h3>
+                <p>Immerse yourself in nature's embrace with our cozy tents, providing a serene and comfortable retreat
+                    under the starlit sky.</p>
+            </li>
+            <li class="card">
+                <img src="./images/game.jpeg" alt="img">
+                <h3>Outdoor Games and Activities</h3>
+                <p>Engage in various recreational activities and outdoor games that encourage team-building and bonding
+                    with nature.</p>
+            </li>
+            <li class="card">
+                <img src="./images/sunshine.JPG" alt="img">
+                <h3>Sunset and Sunrise Viewing Points</h3>
+                <p>Identify scenic spots from where campers can enjoy breathtaking views of sunrise and sunset over
+                    Pavana Lake.</p>
+            </li>
+            <li class="card">
+                <img src="./images/barbecue.jpeg" alt="img">
+                <h3>Barbecue</h3>
+                <p>Enjoy delicious barbecues with our fantastic facilities, allowing you to relish tasty grilled treats
+                    amidst the beautiful scenery of Pavana Lake.</p>
+            </li>
+            <li class="card">
+                <img src="./images/garden.jpg" alt="img">
+                <h3>DJ Night and Party Time</h3>
+                <p>Our friendly and knowledgeable staff is always ready to assist you with setting up your tents,
+                    campfire arrangements, and any other camping needs.</p>
+            </li>
+            <li class="card">
+                <img src="./images/nonvegDinner.jpg" alt="img">
+                <h3>Delicious Dining Options</h3>
+                <p>Indulge in mouthwatering meals prepared with care and served amidst the scenic surroundings. We offer
+                    a variety of food options to cater to different tastes and preferences.</p>
+            </li>
+            <li class="card">
+                <img src="./images/bornfire.webp" alt="img">
+                <h3>Bonfire</h3>
+                <p>Gather around a crackling bonfire and share stories, laughter, and camaraderie with fellow campers
+                    for a memorable evening experience.</p>
+            </li>
+            <li class="card">
+                <img src="./images/toilet.jpg" alt="img">
+                <h3>Clean and Hygienic Washrooms</h3>
+                <p>We provide clean and well-maintained washroom facilities with running water for your convenience.</p>
+            </li>
+            <li class="card">
+                <img src="./images/tikona.jpg" alt="img">
+                <h3>Nearby Sightseeing Assistance</h3>
+                <p>We can provide information and assistance with planning visits to nearby attractions like Pavana Dam,
+                    Tikona Fort, and Lohagad Fort.</p>
+            </li>
+
+            <li class="card">
+                <img src="./images/startril.jpeg" alt="img">
+                <h3>Parking Facilities</h3>
+                <p> We offer designated parking areas for your vehicles, ensuring convenience and safety during your
+                    camping trip.</p>
+            </li>
+            <li class="card">
+                <img src="./images/security.jpeg" alt="img">
+                <h3>24/7 Security</h3>
+                <p> Your safety is our top priority. Our campsite is equipped with round-the-clock security personnel to
+                    ensure a secure environment during your stay.</p>
+            </li>
+            <li class="card">
+                <img src="./images/firstaid.jpeg" alt="img">
+                <h3>First Aid Kit</h3>
+                <p>In case of any minor injuries or medical emergencies, we have a first aid kit on-site to provide
+                    immediate assistance.</p>
+            </li>
+        </ul>
+    </section>
+    <footer>
+        <div class="footer">
+            <span class="link">
+                <a href="#"><i class="fa-solid fa-house fa-sm"></i></a>
+                <a href="https://instagram.com/book_my_pawana_?utm_source=qr&igshid=MzNlNGNkZWQ4Mg==" target="_blank"><i
+                        class="fas fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/8552955233" target="_blank"><i class="fas fa-brands fa-whatsapp"></i></a>
+                <a href="mailto:bookmypawana123@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></a>
+                <a href="tel:+918552955233" target="_blank"><i class="fa-solid fa-phone fa-sm"></i></a>
+            </span>
+            <p>Copyright © 2018 All Rights Reserved By Nitin Adkar</p>
+        </div>
+    </footer>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7P9GJPF" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+</body>
+
+</html>

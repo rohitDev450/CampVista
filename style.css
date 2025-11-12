@@ -1,0 +1,676 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #e2fffe8f;
+}
+
+a {
+  text-decoration: none !important ;
+  color: #000;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #00131faa;
+}
+
+.navbar {
+  display: flex;
+  padding: 0 10px;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar input#menu-toggler {
+  display: none;
+}
+
+.navbar #hamburger-btn {
+  cursor: pointer;
+  display: none;
+}
+
+.navbar .all-links {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .all-links li {
+  position: relative;
+  list-style: none;
+}
+
+.navbar .all-links li a {
+  font-weight: 600;
+}
+
+.navbar .logo a {
+  display: flex;
+  align-items: center;
+  margin-left: 0;
+}
+
+header a,
+footer a {
+  margin-left: 40px;
+  text-decoration: none;
+  color: #fff;
+  height: 100%;
+  padding: 20px 0;
+}
+
+header a:hover,
+footer a:hover {
+  color: #10d7a9;
+}
+
+.homepage {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background: url("./images/tent.jpg");
+  background-position: center 65%;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.homepage::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.homepage .content {
+  display: flex;
+  height: 85%;
+  z-index: 3;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 60px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.homepage .content .text {
+  margin-bottom: 50px;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.content a {
+  color: #000;
+  display: block;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin: 0 10px;
+  padding: 10px 30px;
+  border-radius: 5px;
+  background: #fff;
+  border: 2px solid #fff;
+  transition: 0.4s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+
+.content a:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 80px 0 0;
+}
+
+section h2 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+section > p {
+  text-align: center;
+}
+
+section .cards {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin-top: 50px;
+  padding: 0 10px;
+  justify-content: space-between;
+}
+
+section.about {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.about .company-info {
+  margin-top: 30px;
+}
+
+.about h3 {
+  margin: 30px 0 10px;
+}
+
+.about .team {
+  text-align: left;
+  width: 100%;
+}
+
+.about .team ul {
+  padding-left: 20px;
+}
+
+section .cards .card {
+  background: #a5d8dd;
+  padding: 40px 15px;
+  list-style: none;
+  border-radius: 1.1rem;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.04);
+  margin-bottom: 40px;
+  width: calc(100% / 3 - 30px);
+  text-align: center;
+  border: 2px solid rgb(5, 53, 71);
+}
+
+.portfolio .cards .card {
+  padding: 0 0 20px;
+}
+
+.services .card img {
+  width: 15rem;
+  height: 10rem;
+  margin-bottom: 20px;
+  border-radius: 5%;
+  object-fit: cover;
+}
+
+.portfolio .card img {
+  width: 100%;
+  padding-bottom: 10px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 1rem 1rem 1.5rem 1.5rem;
+}
+
+.cards .card p {
+  padding: 0 15px;
+  margin-top: 5px;
+}
+
+#schedule img {
+  width: 85%;
+}
+
+.about .row {
+  padding: 0 10px;
+}
+
+.contact .row {
+  margin: 60px 0 90px;
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact .row .col {
+  padding: 0 10px;
+  width: calc(100% / 2 - 50px);
+}
+
+.contact .col p {
+  margin-bottom: 10px;
+}
+
+.contact .col p i {
+  color: #7a7a7a;
+  margin-right: 10px;
+}
+
+.contact form input {
+  height: 45px;
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 100%;
+  font-size: 16px;
+  outline: none;
+  border: 1px solid #bfbfbf;
+}
+
+.contact form textarea {
+  padding: 10px;
+  width: 100%;
+  font-size: 16px;
+  height: 150px;
+  outline: none;
+  resize: vertical;
+  border: 1px solid #bfbfbf;
+}
+
+.contact form button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 17px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background: #333;
+  transition: 0.2s ease;
+}
+
+.contact form button:hover {
+  background: #525252;
+}
+
+#insta {
+  text-decoration: none;
+  color: #000;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #183153;
+  padding: 20px 0;
+}
+
+footer div {
+  padding: 0 10px;
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer span {
+  color: #fff;
+}
+
+footer a {
+  padding: 0;
+}
+footer p {
+  color: white;
+}
+
+footer .footer .link a i {
+  font-size: 1.7rem;
+}
+
+/*------------------------- Campsite-Info  -----------------------*/
+
+.camping-info {
+  padding: 40px;
+  text-align: center;
+}
+
+.camping-info-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.camping-info-container h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.camping-info-container p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: -4rem;
+}
+
+/*-------------------------- camping packege and rate --------------------*/
+
+.camping-packages {
+  padding: 20px;
+  text-align: center;
+}
+
+.camping-packages h2 {
+  font-size: 32px;
+}
+
+.camping-packages p {
+  margin-bottom: 2rem;
+}
+
+.table-container {
+  max-width: 800px;
+  margin: 0 auto;
+  overflow-x: auto; /* Enable horizontal scrolling for small screens */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #f2f2f2;
+  border: 2px solid #000000;
+  border-radius: 8px;
+  text-align: center;
+}
+
+th,
+td {
+  padding: 12px;
+  border: 2px solid #000000;
+}
+
+thead {
+  background-color: #d47d25;
+  font-weight: bold;
+  border: 2px solid black;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #dcc8c8;
+}
+
+/* --------------------------------- Book Now Button Style ----------------------*/
+.BNbtn {
+  --color: #0077ff;
+  font-family: inherit;
+  display: inline-block;
+  width: 8rem;
+  height: 2.6em;
+  line-height: 2.5em;
+  overflow: hidden;
+  margin: 20px;
+  font-size: 17px;
+  z-index: 1;
+  color: var(--color);
+  border: 2px solid var(--color);
+  border-radius: 6px;
+  position: relative;
+  margin-bottom: -50px;
+  margin-top: 33px;
+}
+
+.BNbtn::before {
+  position: absolute;
+  content: "";
+  background: var(--color);
+  width: 180px;
+  height: 200px;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.BNbtn:hover {
+  color: white;
+}
+
+.BNbtn:before {
+  top: 100%;
+  left: 100%;
+  transition: 0.3s all;
+}
+
+.BNbtn:hover::before {
+  top: -30px;
+  left: -30px;
+}
+
+/* ------------------------------ QNA --------------------*/
+
+.faq-container {
+  max-width: 70%;
+  margin: 0 auto;
+  padding: 20px;
+}
+.faq-container h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.question {
+  cursor: pointer;
+  background-color: #858587;
+  padding: 10px;
+  margin-bottom: 0.5rem;
+  border: 2px solid rgb(0, 0, 0);
+}
+.answer {
+  padding: 10px;
+  display: none;
+  margin-bottom: 0.5rem;
+  border: 2px solid black;
+}
+
+/* -------------- sticky button --------------- */
+
+.stickybutton {
+  display: flex;
+  position: fixed;
+  background-color: #10d7a9;
+  text-align: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100%;
+  border: 2px solid black;
+  justify-content: center;
+  align-items: center;
+  margin: 82vh 6vw 0 85vw;
+  display: none;
+}
+
+/* Safety and Rules */
+main {
+  padding: 2rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.safety-rules {
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+.safety-rules h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.safety-rules p {
+  color: #555;
+}
+
+.safety-rules ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+/*-------------------------- Get Quotation-------------------- */
+.get-quotation-section {
+  display: flex;
+  height: 6rem;
+  width: 100%;
+  background-color: #f5f5f5;
+}
+
+.left-side,
+.right-side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.left-side {
+  background-color: #f5a623;
+}
+
+.right-side {
+  background-color: #f5a623;
+}
+
+.left-side h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 0;
+}
+
+#get-quotation-btn {
+  font-size: 1rem;
+  color: #fff;
+  background-color: #f5a623;
+  border: none;
+  padding: 1rem 2rem;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .get-quotation-section {
+    flex-direction: column;
+  }
+  .left-side,
+  .right-side {
+    flex: 1;
+  }
+}
+
+/*------------------------------------- Media Query --------------------------------------*/
+
+@media screen and (max-width: 860px) {
+  .navbar .all-links {
+    position: fixed;
+    left: -100%;
+    width: 70%;
+    display: block;
+    height: 100vh;
+    top: 75px;
+    background: #00131fda;
+    transition: left 0.3s ease;
+  }
+
+  .navbar #menu-toggler:checked ~ .all-links {
+    left: 0;
+  }
+
+  .navbar .all-links li {
+    font-size: 18px;
+    margin: 2rem 1.5rem;
+  }
+
+  .navbar #hamburger-btn {
+    display: block;
+  }
+
+  section > p {
+    text-align: center;
+  }
+
+  section .cards .card {
+    width: calc(100% / 2 - 15px);
+    margin-bottom: 30px;
+  }
+
+  h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .homepage .content .text {
+    font-size: 17px;
+    width: 95%;
+  }
+
+  .content a {
+    font-size: 17px;
+    padding: 9px 20px;
+  }
+
+  .contact .row {
+    flex-direction: column;
+  }
+
+  .contact .row .col {
+    width: 100%;
+  }
+
+  .contact .row .col:last-child {
+    margin-top: 40px;
+  }
+
+  footer a {
+    height: 0;
+  }
+
+  /*------------------------------------- camping-info ---------------------------------------*/
+
+  .camping-info-container {
+    width: 100%;
+  }
+
+  .camping-info-container h2 {
+    font-size: 28px;
+  }
+
+  .camping-info-container p {
+    font-size: 16px;
+  }
+  /* ----------------------------- QNA ------------------------*/
+  .faq-container {
+    max-width: 95%;
+  }
+
+  .stickybutton {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  section .cards .card {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .footer {
+    display: block;
+  }
+  .footer p {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: small;
+    color: white;
+  }
+  .footer span {
+    margin: 0 10px 0 6px;
+  }
+}

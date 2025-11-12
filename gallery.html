@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pavana Lake Camping</title>
+
+    <!-- special tags -->
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-W7P9GJPF');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0YMN4W8BE6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-0YMN4W8BE6');
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .gallery {
+            border: 1px solid #f4ebeb;
+        }
+
+        div.gallery img:hover {
+            border: 2px solid #03055e;
+        }
+
+        div.gallery img {
+            width: 100%;
+            height: 20rem;
+        }
+
+        div.desc {
+            padding: 15px;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .responsive {
+            padding: 0 1rem;
+            float: left;
+            width: 33.33%;
+            overflow: hidden;
+        }
+
+        /* Responsive layout - makes a two column-layout instead of four columns */
+
+        @media only screen and (max-width: 768px) {
+            .responsive {
+                width: 49.99999%;
+                margin: 6px 0;
+            }
+
+            div.gallery {
+                border: 1px solid rgb(95, 94, 94);
+            }
+
+            div.gallery img {
+                width: 100%;
+                height: 15rem;
+            }
+
+        }
+
+        @media only screen and (max-width: 500px) {
+            .responsive {
+                width: 100%;
+            }
+
+            div.gallery img {
+                width: 100%;
+                height: 15rem;
+            }
+        }
+
+        .topSpace {
+            margin: 6rem 0 2rem 0;
+            color: #013e3e;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <h2 class="logo"><a href="index.html">Book My Pawana</a></h2>
+            <input type="checkbox" id="menu-toggler">
+            <label for="menu-toggler" id="hamburger-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path d="M3 18h18v-2H3v2zm0-5h18V11H3v2zm0-7v2h18V6H3z" />
+                </svg>
+            </label>
+            <ul class="all-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="./gallery.html">Gallery</a></li>
+                <li><a href="aboutUs.html">About Us</a></li>
+                <li><a href="index.html#contact">Contact Us</a></li>
+                <li><a href="tel:+918552955233" target="_blank"><i class="fa-solid fa-phone"></i>
+                        &nbsp;&nbsp;&nbsp;Call Us</a>
+                </li>
+                <li><a class="whatsapp" href="https://wa.me/8552955233" target="_blank"><i
+                            class="fas fa-brands fa-whatsapp"></i>&nbsp;&nbsp;&nbsp;Whatsapp</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1 class="topSpace">Pavana Camping Gallery</h1>
+    <div class="responsive">
+        <div class="gallery">
+            <a href="./images/tent.JPG">
+                <img src="./images/tent.JPG" alt="Cinque Terre" width="600" height="400">
+            </a>
+            <div class="desc">The Pavana Lake Camping view with Tung Fort.</div>
+        </div>
+    </div>
+    <div class="responsive">
+
+        <div class="gallery">
+            <a href="./images/camping.jpg">
+                <img src="./images/camping.jpg" alt="Mountains" width="600" height="400">
+            </a>
+            <div class="desc">The Customer reaching the Pavana Lake Camping.</div>
+        </div>
+    </div>
+    <div class="responsive">
+        <div class="gallery">
+            <a href="./images/selfie.jpg">
+                <img src="./images/selfie.jpg" alt="Northern Lights" width="600" height="400">
+            </a>
+            <div class="desc">The Couple enjoying & capture the memories.</div>
+        </div>
+    </div>
+    <div class="responsive">
+        <div class="gallery">
+            <a href="./images/campsite.jpg">
+                <img src="./images/campsite.jpg" alt="Forest" width="600" height="400">
+            </a>
+            <div class="desc">The Evening view of Pavana Lake camping.</div>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="gallery">
+            <a href="./images/garden.jpg">
+                <img src="./images/garden.jpg" alt="Mountains" width="600" height="400">
+            </a>
+            <div class="desc">The Pavana Lake Camping Garden with Tents.</div>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="gallery">
+            <a href="./images/barbecue.jpeg">
+                <img src="./images/barbecue.jpeg" alt="Mountains" width="600" height="400">
+            </a>
+            <div class="desc">The NonVeg Barbecue Frying.</div>
+        </div>
+    </div>
+    <div class="responsive">
+        <div class="gallery">
+            <a href="./images/sunshine.JPG">
+                <img src="./images/sunshine.JPG" alt="Mountains" width="600" height="400">
+            </a>
+            <div class="desc">The best view of sunshine at Pavana Camping.</div>
+        </div>
+    </div>
+    <div class="responsive">
+        <div class="gallery">
+            <a href="./images/tungFort.jpg">
+                <img src="./images/tungFort.jpg" alt="Mountains" width="600" height="400">
+            </a>
+            <div class="desc">The Tung Fort view from Pavana Lake Camping.</div>
+        </div>
+    </div>
+    <div class="responsive">
+        <div class="gallery">
+            <a href="./images/startril.jpeg">
+                <img src="./images/startril.jpeg" alt="Mountains" width="600" height="400">
+            </a>
+            <div class="desc">The Parking Place with Campsite Board.</div>
+        </div>
+    </div>
+    <div class="responsive">
+        <div class="gallery">
+            <a href="./images/evening.jpg">
+                <img src="./images/evening.jpg" alt="Mountains" width="600" height="400">
+            </a>
+            <div class="desc">The best Evening at Pavana Lake Caming.</div>
+        </div>
+    </div>
+    <div class="responsive">
+        <div class="gallery">
+            <a href="./images/evening2.jpg">
+                <img src="./images/evening2.jpg" alt="Mountains" width="600" height="400">
+            </a>
+            <div class="desc">The Tung Fort and Pavana Dam.</div>
+        </div>
+    </div>
+    <div class="responsive">
+        <div class="gallery">
+            <a href="./images/tentinGarden.jpg">
+                <img src="./images/tentinGarden.jpg" alt="Mountains" width="600" height="400">
+            </a>
+            <div class="desc">The Tents is place in the Garden.</div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer">
+            <span class="link">
+                <a href="#"><i class="fa-solid fa-house fa-sm"></i></a>
+                <a href="https://instagram.com/book_my_pawana_?utm_source=qr&igshid=MzNlNGNkZWQ4Mg==" target="_blank"><i
+                        class="fas fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/8552955233" target="_blank"><i class="fas fa-brands fa-whatsapp"></i></a>
+                <a href="mailto:bookmypawana123@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></a>
+                <a href="tel:+918552955233" target="_blank"><i class="fa-solid fa-phone fa-sm"></i></a>
+            </span>
+            <p>Copyright © 2018 All Rights Reserved By Nitin Adkar</p>
+        </div>
+    </footer>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7P9GJPF" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+</body>
+
+</html>
