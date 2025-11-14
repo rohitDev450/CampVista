@@ -17,9 +17,9 @@ pipeline {
             steps {
                 script {
                     if (!params.DOCKER_TAG?.trim()) {
-                        error '❌ DOCKER_TAG parameter is required! Please provide a tag value (e.g., v1, v2).'
+                        error ' DOCKER_TAG parameter is required! Please provide a tag value (e.g., v1, v2).'
                     } else {
-                        echo "✅ DOCKER_TAG is set to: ${params.DOCKER_TAG}"
+                        echo " DOCKER_TAG is set to: ${params.DOCKER_TAG}"
                     }
                 }
             }
