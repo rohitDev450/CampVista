@@ -91,22 +91,22 @@ pipeline {
     }
 
     // POST BLOCK IS OPTIONAL AND VALID
-    // post {
-    //     success {
-    //         script {
-    //             def xmlFiles = findFiles(glob: '*.xml')
-    //             if (xmlFiles.length > 0) {
-    //                 archiveArtifacts artifacts: '*.xml', followSymlinks: false
-    //             } else {
-    //                 echo "No XML files to archive"
-    //             }
+    post {
+        success {
+            script {
+                def xmlFiles = findFiles(glob: '*.xml')
+                if (xmlFiles.length > 0) {
+                    archiveArtifacts artifacts: '*.xml', followSymlinks: false
+                } else {
+                    echo "No XML files to archive"
+                }
 
-    //             catchError(buildResult: 'SUCCESS', stageResult: 'SUCCESS') {
-    //                 build job: "Codexhub-CD",
-    //                       parameters: [string(name: 'DOCKER_TAG', value: "${params.DOCKER_TAG}")],
-    //                       wait: false, propagate: false
-    //             }
-    //         }
-    //     }
-    // }
+                catchError(buildResult: 'SUCCESS', stageResult: 'SUCCESS') {
+                    build job: "Codexhub-CD",
+                          parameters: [string(name: 'DOCKER_TAG', value: "${params.DOCKER_TAG}")],
+                          wait: false, propagate: false
+                }
+            }
+        }
+    }
 }
