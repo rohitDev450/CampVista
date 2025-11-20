@@ -1,176 +1,206 @@
-CampVista – Cloud-Native Campsite Booking Platform
+## CampVista – Cloud-Native Campsite Booking Platform
+```bash
 End-to-End DevOps Project | Jenkins • SonarQube • Trivy • Docker • Kubernetes • EKS • ArgoCD • AWS ALB
-🚀 Project Overview
+```
 
-CampVista is a fully automated, cloud-native web application deployed on AWS EKS using a modern DevOps toolchain.
-This project demonstrates real-world CI/CD implementation with security, quality analysis, orchestration, GitOps, monitoring, and auto-scaling.
+## 📌 Project Overview
 
-This repository showcases your skills as a DevOps Engineer by combining:
+CampVista is a production-grade, cloud-native campsite booking website deployed on AWS EKS using a complete DevOps toolchain.
 
-CI with Jenkins
+This project demonstrates:
 
-Code Quality via SonarQube
+- CI with Jenkins
 
-Vulnerability Scanning via Trivy + OWASP
+- Code Quality via SonarQube
 
-Docker Image Build & Push
+- Vulnerability Scanning via Trivy + OWASP
 
-Kubernetes Deployment (Deployment, HPA, Service, Ingress)
+- Docker Image Build & Push
 
-AWS EKS Managed Cluster
+- Kubernetes Deployment (Deployment, HPA, Service, Ingress)
 
-GitOps using ArgoCD
+- GitOps using ArgoCD
 
-Production-grade AWS Application Load Balancer (ALB)
+- Autoscaling using Kubernetes HPA
 
-📸 Project Screenshots
+- Production-grade AWS ALB for public access
 
-Below screenshots are included to help recruiters clearly visualize your project.
+- This repository showcases real-world DevOps engineering with security, automation, orchestration, and cloud deployment.
+
+## 🛠️ Tools & Technologies
+- Category	Tools
+- CI/CD	Jenkins
+- Code Quality	SonarQube
+- Security	Trivy, OWASP Dependency Check
+- Containerization	Docker
+- Kubernetes	EKS, kubectl, HPA
+- GitOps	ArgoCD
+- AWS	EC2, IAM, ALB, VPC, Subnets, Route Tables
+- Repository	GitHub
+
+##
+
+## 📸 Project Screenshots
 
 ✅ CI/CD Pipeline (Jenkins)
 
-![Pipeline](/mnt/data/Screenshot (261).png)
+<img width="1920" height="1080" alt="Screenshot (261)" src="https://github.com/user-attachments/assets/b8a25032-7e03-48d4-95f7-8e5acab3e164" />
 
-🌐 Live Website Deployed on AWS ALB
+##
 
-![Website](/mnt/data/Screenshot (287).png)
+🌐 Live Website on AWS ALB
 
-🧭 ArgoCD GitOps Automation
+<img width="1920" height="1080" alt="Screenshot (286)" src="https://github.com/user-attachments/assets/9a676536-b8ec-4841-817c-9c7c1435c220" />
 
-![ArgoCD](/mnt/data/Screenshot (286).png)
+##
 
-🧪 SonarQube Code Quality Analysis
+🧭 ArgoCD GitOps Deployment
 
-![SonarQube](/mnt/data/Screenshot (262).png)
+<img width="1920" height="1080" alt="Screenshot (285)" src="https://github.com/user-attachments/assets/eb106d55-3c4e-408d-87e8-45f5015fb87b" />
 
-🔍 Quality Gate Dashboard
-
-![Quality Gates](/mnt/data/Screenshot (263).png)
+##
 
 🖥️ AWS EC2 & Infra Overview
 
-![EC2](/mnt/data/Screenshot (285).png)
+<img width="1920" height="1080" alt="Screenshot (287)" src="https://github.com/user-attachments/assets/947dc81b-f552-4d68-b377-e44ee0e6aa04" />
 
-🚀 Architecture Diagram (High-Level)
-               Developer Pushes Code
-                        |
-                        v
-                 GitHub Repository
-                        |
-                        v
-                Jenkins CI Pipeline
-        -----------------------------------
-        | Checkout | SonarQube | Trivy | Docker |
-        -----------------------------------
-                        |
-                        v
-              Docker Image Pushed to Hub
-                        |
-                        v
-                  ArgoCD Watches Repo
-                        |
-                        v
-                 Kubernetes (EKS)
-     ----------------------------------------
-     | Deployment | HPA | Service | Ingress |
-     ----------------------------------------
-                        |
-                        v
-          AWS Application Load Balancer
-                        |
-                        v
-                User Access Website
 
-🛠️ Tools & Technologies
-Category	Tools
-CI/CD	Jenkins
-Code Quality	SonarQube
-Security	Trivy, OWASP Dependency Check
-Containerization	Docker
-Kubernetes	EKS, kubectl, HPA
-GitOps	ArgoCD
-AWS	EC2, IAM, ALB, VPC, Route Tables, Subnets
-Repos	GitHub
-Monitoring	Pipeline view + ArgoCD UI
-📦 Project Setup & Commands
+##
+
+## 🏗️ High-Level Architecture
+```bash
+Developer Pushes Code
+        |
+        v
+   GitHub Repo
+        |
+        v
+ Jenkins CI Pipeline
+ ----------------------------------------
+ | Checkout | SonarQube | Trivy | Docker |
+ ----------------------------------------
+        |
+        v
+ Docker Image → Docker Hub
+        |
+        v
+ ArgoCD Watches Git Repo
+        |
+        v
+ Kubernetes (AWS EKS)
+ ---------------------------------------------------
+ | Deployment | HPA | Service | Ingress (ALB) |
+ ---------------------------------------------------
+        |
+        v
+   AWS Application Load Balancer
+        |
+        v
+   End-users access the website
+
+```
+
+##
+
+## 📦 Project Setup & Commands
+
 1️⃣ Clone Repository
+```bash
 git clone https://github.com/your-username/campvista.git
 cd campvista
+```
 
 2️⃣ Jenkins CI Pipeline
-Install Jenkins Plugins:
 
-Git
+- Install required Jenkins plugins:
 
-Pipeline
+- Git
 
-SonarQube Scanner
+- Pipeline
 
-OWASP Dependency Check plugin
+- SonarQube Scanner
 
-Docker Pipeline
+- OWASP Dependency Check
 
-Trigger build manually or via webhook.
+- Docker Pipeline
+
+- Run the pipeline manually or trigger via Git webhook.
+
+
 3️⃣ SonarQube Setup (Local or EC2)
+
 Run SonarQube locally:
+
+```bash
 docker run -d --name sonar -p 9000:9000 sonarqube:lts
+```
 
+## Generate a Sonar token → add to Jenkins credentials.
 
-Add Sonar token inside Jenkins credentials.
 
 4️⃣ Trivy Security Scan
+```bash
 trivy filesystem .
 trivy image your-docker-image
+```
 
-5️⃣ Docker Image Build & Push
+5️⃣ Docker Build & Push
+```bahs
 docker build -t campvista-app .
 docker tag campvista-app rohitaute450/campvista:latest
 docker push rohitaute450/campvista:latest
+```
 
-6️⃣ Kubernetes Deployment on EKS
-Update kubeconfig
+6️⃣ Kubernetes Deployment on AWS EKS
+
+Update kubeconfig:
+```bash
 aws eks update-kubeconfig --region ap-south-1 --name campvista-project
+```
 
-Apply manifests
+Apply all manifests:
+```bash
 kubectl apply -f namespace.yaml
 kubectl apply -f deployment.yaml
 kubectl apply -f hpa.yaml
 kubectl apply -f service.yaml
 kubectl apply -f ingress.yaml
+```
+
 
 7️⃣ ArgoCD GitOps Setup
+```bash
 kubectl create namespace argocd
 kubectl apply -n argocd -f install.yaml
-
+```
 
 Login:
-
+```bash
 argocd admin initial-password -n argocd
+```
 
-8️⃣ AWS Load Balancer (ALB Ingress)
 
-Annotate ingress:
+8️⃣ AWS ALB Ingress Configuration
 
+- Add these annotations in ingress.yaml:
+```bash
 annotations:
   kubernetes.io/ingress.class: alb
   alb.ingress.kubernetes.io/scheme: internet-facing
+```
 
-📌 Features Implemented
+##
 
-✔️ Full CI/CD automation
+## ⭐ Features Implemented
 
-✔️ Static code analysis
+- ✔️ Full CI/CD automation
+- ✔️ Static code analysis via SonarQube
+- ✔️ Trivy & OWASP vulnerability scanning
+- ✔️ Docker image build + push
+- ✔️ Kubernetes autoscaling with HPA
+- ✔️ GitOps deployment with ArgoCD
+- ✔️ AWS ALB routing for internet access
+- ✔️ Zero-downtime deployments
+- ✔️ Fully cloud-managed infrastructure
 
-✔️ Security vulnerabilities detection
-
-✔️ Docker image scanning
-
-✔️ Auto-scaling using HPA
-
-✔️ GitOps deployment via ArgoCD
-
-✔️ AWS ALB routing
-
-✔️ Zero-downtime rollouts
-
-✔️ Complete cloud infrastructure
+  ##
